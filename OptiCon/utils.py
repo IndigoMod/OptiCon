@@ -1,6 +1,13 @@
 from .packet import Packet
 import json
 
+
 class Utils:
-    def decode_packet(pck):
-        return json.JSONDecoder.decode(Packet.encode(pck))
+    def get_json_value(content, name):
+        return content[name]
+
+    def decode_json(itm):
+        return json.JSONDecoder.decode(itm)
+
+    def encode_json(itm):
+        return json.JSONEncoder.encode(itm)
